@@ -30,14 +30,27 @@
 
 ```
 core/
+  __init__.py
+  asgi.py
   settings.py
   urls.py
+  wsgi.py
+  __pycache__/
+    ...
 users/
+  __init__.py
+  admin.py
+  apps.py
   models.py
   serializers.py
+  urls.py
   views.py
   views_pages.py
   authentication.py
+  migrations/
+    ...
+  __pycache__/
+    ...
 templates/
   register.html
   login.html
@@ -45,21 +58,23 @@ templates/
 static/
   js/auth.js
   js/search.js
-README.md
+db.sqlite3
+manage.py
+README.md #(читаете)
 ```
 
 ## Установка (локально)
 
 ```bash
-git clone <репозиторий> myproject
-cd myproject
+git clone https://github.com/Azumushy/Web_Dev.git
+cd Final_project
 python -m venv venv
 # Linux/Mac
 source venv/bin/activate
 # Windows
 venv\Scripts\activate
 pip install --upgrade pip
-pip install django djangorestframework djangorestframework-simplejwt
+pip install django djangorestframework djangorestframework-simplejwt    #необходимо для работы кода
 ```
 
 Настройка `settings.py` (по умолчанию уже подходит для разработки):
